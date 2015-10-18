@@ -9,10 +9,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cloudflare = require('cloudflare-express');
 
+// routing
 var routes = require('./routeHandler');
 
 var app = express();
 
+// configuration
 storageLocation = '/root/nodejs/files.elmnts.co/public/files/';
 serverAddress = 'http://files.elmnts.co';
 title = 'files.elmnts.co';
@@ -50,6 +52,7 @@ app.use(function(err, req, res, next) {
     siteTitle: title,
     error: {}
   });
+  log("PRODUCTION ERROR:\n" + JSON.stringify(err));
 });
 
 // global logging function

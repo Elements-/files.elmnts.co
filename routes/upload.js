@@ -17,11 +17,12 @@ exports.handle = function(req, res) {
     dest: storageLocation,
     // rename function is called at start of upload
     rename: function(name, file) {
-      log(req.cf_ip, 'has started uploading ' + realname);
       stats.uploadIncrement(file.size);
 
       realname = file.filename;
       filename = key + '-' + realname;
+
+      log(req.cf_ip, 'has started uploading ' + realname);
 
       var hash = crypto.createHash('md5').update(filename).digest('hex');
       if(req.headers.selfdestruct == 'true') {

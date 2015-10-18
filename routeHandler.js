@@ -6,6 +6,7 @@ var indexRoute = require('./routes/index');
 var uploadRoute = require('./routes/upload');
 var downloadRoute = require('./routes/download');
 
+// handle routes based on paths
 router.get('/', function(req, res, next) {
   indexRoute.handle(req, res);
 });

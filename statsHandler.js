@@ -7,12 +7,16 @@ var mongo = require('./mongoHandler');
 var db = 'Information';
 
 exports.downloadIncrement = function(size) {
-  mongo.updateDocument(db, {}, { $inc : { "downloads" : 1 } });
-  mongo.updateDocument(db, {}, { $inc : { "bandwidth" : size } });
+  increment("bandwidth", size);
+  increment("downloads", 1)
 }
 
 exports.uploadIncrement = function(size) {
-  mongo.updateDocument(db, {}, { $inc : { "storage" : size } });
-  mongo.updateDocument(db, {}, { $inc : { "bandwidth" : size } });
-  mongo.updateDocument(db, {}, { $inc : { "uploads" : 1 } });
+  increment("storage", size);
+  increment("bandwidth", size);
+  increment("uploads", 1);
+}
+
+function increment(field, value) {
+  mongo.updateDocument(db, {}, { $inc : { field : value } });
 }

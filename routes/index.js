@@ -5,10 +5,12 @@ var mongo = require('../mongoHandler');
 exports.handle = function(req, res) {
   // get stats data for labels
   mongo.findDocuments('Information', {}, function(docs) {
+    // unit conversions
     var storage = round(docs[0].storage / 1000000000); // bytes -> GB
     var bandwidth = round(docs[0].bandwidth / 1000000000); // bytes -> GB
     var downloads = round(docs[0].downloads / 1000); // # -> #K
 
+    // render the page with human readable values
     res.render('index', {
       "siteTitle" : title,
       "downloads" : downloads,
