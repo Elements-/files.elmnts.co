@@ -1,6 +1,9 @@
 include layout
 #wrap
   .container
+    .alert.alert-danger
+        strong NOTICE:
+        |  Some older files may be missing, if you need to recover missing files, email cam@elmnts.co with the full URL (contains keys)
     .row
       .col-md-4
         h2= siteTitle
@@ -20,7 +23,7 @@ include layout
           button.btn.btn-lg.btn-primary.select
             span UPLOAD&nbsp;&nbsp;
             i.fa.fa-upload
-    p File sharing made easy with direct download links, up to 1Gb/s speeds, and 100% uptime. Files are encrypted using keys stored in the download URL, not on our servers. Max upload size is 256MB.&nbsp;
+    p File sharing made easy with direct download links, up to 1Gb/s speeds, and 100% uptime. Files are encrypted using AES256, keys stored in the download URL to keep files on our servers useless alone. Max upload size is 256MB.&nbsp;
       a(href='#', type='button', data-toggle='modal', data-target='#demo')
         span UNIX Command Line Usage
 

@@ -15,8 +15,11 @@ exports.uploadIncrement = function(size) {
   increment("storage", size);
   increment("bandwidth", size);
   increment("uploads", 1);
+  console.log('upload stats');
 }
 
 function increment(field, value) {
-  mongo.updateDocument(db, {}, { $inc : { field : value } });
+  var obj = {};
+  obj[field] = value;
+  mongo.updateDocument(db, {}, { $inc : obj });
 }
