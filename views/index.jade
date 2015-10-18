@@ -1,0 +1,82 @@
+include layout
+#wrap
+  .container
+    .row
+      .col-md-4
+        h2= siteTitle
+      .col-md-3
+        .stats
+          span.label.label-primary
+            .col-md-5.labelText UPLOADS
+            .col-md-7.labelData #{uploads} (#{storage}GB)
+          span.label.label-success
+            .col-md-5.labelText DOWNLOADS
+            .col-md-7.labelData #{downloads}k (#{bandwidth}GB)
+      .col-md-5
+        #selfDestruct.pull-right
+          span Self Destruct after Download&nbsp;
+          input#selfDestruct(type='checkbox',value='selfDestruct',onclick='setSelfDestruct(this)')
+          span &nbsp;&nbsp;&nbsp;
+          button.btn.btn-lg.btn-primary.select
+            span UPLOAD&nbsp;&nbsp;
+            i.fa.fa-upload
+    p File sharing made easy with direct download links, up to 1Gb/s speeds, and 100% uptime. Files are encrypted using keys stored in the download URL, not on our servers. Max upload size is 256MB.&nbsp;
+      a(href='#', type='button', data-toggle='modal', data-target='#demo')
+        span UNIX Command Line Usage
+
+    #demo.modal.fade(role='dialog')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            button#close.close(type='button', data-dismiss='modal') ×
+            h4.modal-title UNIX Command Line Usage
+            hr(style='margin-top:0px')
+            h5 Install Dependencies
+            p The UNIX upload script uses cURL and wget, these packages are typically installed by default. If they are not, install them:
+            small Debian/Ubuntu
+            pre apt-get install curl wget
+            small CentOS/Fedora
+            pre yum install curl wget
+            br
+
+            h5 Install the Script
+            p Download and setup the script by executing the command below.
+            pre wget http://files.elmnts.co/upload_script -O /bin/upload && chmod 755 /bin/upload
+            br
+
+            h5 Upload your First File
+            p Uploads are as simple as can be using this script. Give it a try!
+            pre upload &lt;filename&gt;
+            p Note: add the -d option if you would like to enable self destruct mode.
+            pre upload -d &lt;filename&gt;
+            br
+
+            h5 Demo Installation and Usage
+            img.img-responsive(src='/images/demo.gif')
+    hr
+
+    #previews
+        #template.uploadcontainer.slideup(class='slideDown',style='visibility:hidden;')
+          .uploadtext
+            span
+              span &nbsp;&nbsp;
+              i.fa.fa-file
+              span &nbsp;&nbsp;
+              span.name(data-dz-name='')
+              span &nbsp;&nbsp;&nbsp;
+              strong.error.text-danger(data-dz-errormessage='')
+            span
+              span.size(data-dz-size='')
+              span &nbsp;&nbsp;&nbsp;
+            span
+              strong.pull-right
+                span.link
+
+                //span &nbsp;
+                //span
+                  //i.fa.fa-cloud-download
+                span &nbsp;
+          .progress.progress-striped.active(role='progressbar', aria-valuemin='0', aria-valuemax='100', aria-valuenow='0')
+            .progress-bar.progress-bar-success(style='width:0%;', data-dz-uploadprogress='')
+script(src='/javascripts/client-upload.js')
+include footer

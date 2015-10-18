@@ -1,0 +1,82 @@
+html, body {
+  height: 100%;
+}
+
+p {
+  font-size:16px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+  padding-top:20px;
+}
+
+#selfDestruct {
+  padding-top: 17px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-top:20px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#close {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.uploadcontainer {
+	outline: #eeeeee;
+  outline-style: solid;
+  outline-width: thin;
+  padding-top: 4px;
+}
+
+.uploadtext {
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.builton {
+	/**width:60px;**/
+	height:25px;
+	padding-bottom:3px;
+	padding-left:3px;
+}
+#node {
+	height: 32px;
+}
+.stats {
+  padding-top:28px;
+}
+.label {
+  width:150px;
+  margin-top:3px;
+  position: relative;
+  display: block !important;
+  height:15px;
+}
+
+.labelText {
+  display: block;
+  margin:0px;
+  text-align: left;
+  width:50px;
+  padding:0px !important;
+}
+
+.labelData {
+  padding:0px !important;
+  display: block;
+  text-align: right;
+}
