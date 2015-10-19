@@ -9,22 +9,22 @@ exports.handle = function(req, res) {
 
   fileExists(storageLocation + filename, function(stat) {
     // file exists
-    encryption.decryptFile(req.params.filename, req.params.key, false, function() {
-      res.sendFile(storageLocation + filename + '.dat', function(err) {
+    encryption.decryptFile(req.params.filename, req.params.key, false, function(tempfile) {
+      res.sendFile(tempfile, function(err) {
         log(req.cf_ip, 'has downloaded ' + req.params.filename);
         stats.downloadIncrement(stat.size);
-        encryption.removeFile(storageLocation + filename + '.dat');
+        encryption.removeFile(tempfile);
       });
     });
   }, function() {
     // regular file does not exist, check if a .temp version exists
     fileExists(storageLocation + filename + '.temp', function(stat) {
       // temp file exists
-      encryption.decryptFile(req.params.filename, req.params.key, true, function() {
-        res.sendFile(storageLocation + filename + '.dat', function(err) {
+      encryption.decryptFile(req.params.filename, req.params.key, true, function(tempfile) {
+        res.sendFile(tempfile, function(err) {
           log(req.cf_ip, 'has downloaded ' + req.params.filename);
           stats.downloadIncrement(stat.size);
-          encryption.removeFile(storageLocation + filename + '.dat');
+          encryption.removeFile(tempfile);
           encryption.removeFile(storageLocation + filename + '.temp');
           log('local', 'has destroyed ' + storageLocation + filename + '.temp');
         });

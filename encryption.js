@@ -26,7 +26,7 @@ exports.encryptFile = function(filename, key, temp, callback) {
 // decrypts /path/bla into /path/bla.dat and DOES NOT delete source
 exports.decryptFile = function(filename, key, temp, callback) {
   var source = storageLocation + exports.getHashedName(filename, key);
-  var destination = storageLocation + exports.getHashedName(filename, key) + '.dat';
+  var destination = storageLocation + exports.getHashedName(filename, key) + '-' + Math.random().toString(36).substring(6) + '.dat';
   if(temp) source += '.temp';
 
   encryptor.decryptFile(source, destination, key, function(err) {
@@ -34,7 +34,7 @@ exports.decryptFile = function(filename, key, temp, callback) {
       log('local', 'Decryption Error ' + err);
       throw err;
     }
-    callback();
+    callback(destination);
   });
 }
 

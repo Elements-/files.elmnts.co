@@ -1,3 +1,16 @@
+/**
+
+http://files.elmnts.co
+
+Cloud File Sharing made Easy
+Started Project on 9/5/15
+
+by Cameron Kelliher (Elements Technologies LLC)
+cam@elmnts.co
+https://github.com/Elements-
+
+**/
+
 // For keymetrics.io
 require('pmx').init({ http : true });
 
