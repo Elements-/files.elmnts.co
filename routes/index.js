@@ -1,5 +1,5 @@
 var express = require('express');
-var mongo = require('../mongoHandler');
+var mongo = require('mongo-handler')('mongodb://localhost:27017/Files');
 
 // home page
 exports.handle = function(req, res) {

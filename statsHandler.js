@@ -1,5 +1,5 @@
 var express = require('express');
-var mongo = require('./mongoHandler');
+var mongo = require('mongo-handler')('mongodb://localhost:27017/Files');
 
 // keeps these ugly queries out of the main code
 // and deals with incrementing stats
@@ -15,7 +15,6 @@ exports.uploadIncrement = function(size) {
   increment("storage", size);
   increment("bandwidth", size);
   increment("uploads", 1);
-  console.log('upload stats');
 }
 
 function increment(field, value) {
