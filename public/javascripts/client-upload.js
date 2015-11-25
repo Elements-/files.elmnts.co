@@ -16,6 +16,7 @@ var bodyDropzone = new Dropzone(document.body, {
 });
 
 bodyDropzone.on("addedfile", function(file) {
+  $('#uploadBox').remove();
   var linkelements = document.getElementsByClassName("link");
   var nameelements = document.getElementsByClassName("name");
   for(var i = 0; i < linkelements.length; i++) {
@@ -38,7 +39,6 @@ bodyDropzone.on("success", function(file) {
 
       var client = new ZeroClipboard(document.getElementById("copy-button-"+uploads));
       client.on("ready", function(readyEvent) {
-        //alert( "ZeroClipboard SWF is ready!" );
         client.on("aftercopy", function(event) {
           event.target.innerHTML ="<i class='fa fa-1 fa-check'></i>&nbsp;&nbsp;Copied to Clipboard&nbsp;&nbsp;";
           event.target.class = event.target.class + ' expandOpen';

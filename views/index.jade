@@ -1,9 +1,6 @@
 include layout
 #wrap
   .container
-    .alert.alert-danger
-        strong NOTICE:
-        |  Some older files may be missing, if you need to recover missing files, email cam@elmnts.co with the full URL (contains keys)
     .row
       .col-md-4
         h2= siteTitle
@@ -58,6 +55,11 @@ include layout
             img.img-responsive(src='/images/demo.gif')
     hr
 
+    #uploadBox
+      center
+        i#uploadIcon.fa.fa-cloud-upload
+        h4#uploadText Drop files here to upload
+        
     #previews
         #template.uploadcontainer.slideup(class='slideDown',style='visibility:hidden;')
           .uploadtext

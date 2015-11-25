@@ -80,3 +80,19 @@ a {
   display: block;
   text-align: right;
 }
+
+#uploadBox {
+  width:50%;
+  border: 4px dashed #bdc3c7;
+  padding: 15px;
+  margin-top:100px;
+  margin-right:auto;
+  margin-left:auto;
+}
+#uploadIcon {
+  font-size: 80px;
+  color: #bdc3c7;
+}
+#uploadText {
+  color: #bdc3c7;
+}
