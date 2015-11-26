@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700);
+
+body {
+  font-family: 'Titillium Web', sans-serif !important;
+  background-color:#ecf0f1 !important;
+  margin-bottom: 75px;
+}
+.container {
+  width:960px !important;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #7f8c8d;
+}
+.container {
+  width: 970px !important;
+}
+#navbar {
+  height:150px;
+  width:100%;
+  background-color:#2980b9;
+}
+#content {
+  width:100%;
+  height:100%;
+}
+#title {
+  color:#ecf0f1;
+  font-weight:400;
+  line-height: 45px;
+  font-size: 22pt;
+  margin-top: 10px;
+}
+.circle {
+  height:30px;
+  width:30px;
+  margin-top:5px;
+  margin-left:5px;
+  border-radius:50%;
+  background-color:#3498db;
+}
+.circle>.icon {
+  color:#ecf0f1;
+  font-size:14pt;
+  padding: 7px;
+  padding-left: 12px;
+}
+#infoText {
+  font-weight:600;
+  width:100%;
+  color:#ecf0f1;
+  line-height:15px;
+  font-size:10pt;
+}
+.left {
+  display:block;
+}
+.divider {
+  height:3px;
+  width:100%;
+  background-color:#3498db;
+  margin-top:12px;
+  margin-bottom:6px;
+}
+small {
+  font-size:9pt;
+  color:#ecf0f1;
+  font-weight:600;
+}
+.deleteFileBox {
+  color: #ecf0f1;
+  font-weight: 600;
+  line-height: 15px;
+  margin-top: 25%;
+}
+#deleteFileText {
+  font-size: 9pt;
+  text-align: right;
+  float: left;
+  width:50%;
+  margin-right:8px;
+}
+.onoffswitch {
+    float: left;
+    position: relative; width: 75px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #ECF0F1; border-radius: 5px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #2ECC71; color: #ECF0F1;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #ECF0F1; color: #7F8C8D;
+    text-align: right;
+}
+.onoffswitch-switch {
+    height: 22px;
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 41px;
+    border: 2px solid #999999; border-radius: 5px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.statBox {
+  color:white;
+  border-radius:5px;
+  float:left;
+  height:50px;
+  margin-top:15px;
+  padding-top: 2px;
+}
+.statTitle {
+  font-size:12pt;
+  font-weight:400;
+  padding-top: 8px;
+  padding-left: 10px;
+  width:150px;
+}
+.stat {
+  text-align: right;
+  margin-right:5px;
+  font-weight:600;
+}
+.downloads {
+  background-color:#2ecc71;
+}
+.uploads {
+  background-color:#47a5e3;
+}
+#dragdropbox {
+  width:50%;
+  height:180px;
+  border: #95a5a6 3px solid;
+  border-radius:5px;
+  margin-top:100px;
+  margin-left: auto;
+  margin-right:auto;
+}
+#dragdropicon {
+  color:#95a5a6;
+  font-size:70pt;
+  margin-top:15px;
+}
+#dragdroptext {
+  font-size:14pt;
+  font-weight:600;
+  color:#95a5a6;
+}
+.footerlogo {
+  width:25px;
+  height:25px;
+  font-size:18pt !important;
+  margin-top:27px;
+  float:left;
+  color: #ECF0F1;
+}
+.footerlabel {
+  margin-top:30px;
+  float:left;
+}

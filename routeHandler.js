@@ -19,4 +19,8 @@ router.post('/upload', function(req, res, next) {
   uploadRoute.handle(req, res);
 });
 
+router.get('/newDesign', function(req, res, next){
+  res.render('new');
+});
+
 module.exports = router;
