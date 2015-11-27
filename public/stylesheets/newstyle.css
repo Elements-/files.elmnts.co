@@ -46,11 +46,25 @@ html {
   border-radius:50%;
   background-color:#3498db;
 }
+.fileCircle {
+  float:left;
+  height:25px;
+  width:25px;
+  margin-top:5px;
+  margin-left:5px;
+  border-radius:50%;
+  background-color:#7f8c8d;
+}
 .circle>.icon {
   color:#ecf0f1;
   font-size:14pt;
   padding: 7px;
   padding-left: 12px;
+}
+.fileCircle>.icon {
+  color:#ecf0f1;
+  font-size:10pt;
+  padding: 7px;
 }
 #infoText {
   font-weight:600;
@@ -169,6 +183,7 @@ small {
   margin-top:100px;
   margin-left: auto;
   margin-right:auto;
+  visibility: hidden;
 }
 #dragdropicon {
   color:#95a5a6;
@@ -191,4 +206,44 @@ small {
 .footerlabel {
   margin-top:30px;
   float:left;
+}
+.fileRow {
+  width:100%;
+  height:50px;
+  border: #95a5a6 1px solid;
+  margin-top:15px;
+}
+.fileRowContent {
+  height:35px;
+}
+.precentage {
+  font-size: 8pt;
+  float: left;
+  line-height: 15px;
+  margin-left:3px;
+}
+.fileName {
+  font-size:10pt;
+  font-weight:700;
+  color: #4a4a4a;
+  float:left;
+  width:250px;
+  margin: 5px;
+}
+.linkText {
+  font-size:10pt;
+  font-weight:700;
+  color: #4a4a4a;
+  float:right;
+  margin:5px;
+}
+.copyButton {
+  width:100%;
+  height:100%;
+  border-radius:0px;
+  background-color:#2ecc71;
+  box-shadow: -10px 0px 20px 1px #bdc3c7;
+}
+.copyButton : hover {
+  background-color:#28b463 !important;
 }
