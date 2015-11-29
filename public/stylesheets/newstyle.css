@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Titillium Web', sans-serif !important;
-  background-color:#ecf0f1 !important;
+  background-color:#FFFFFF !important;
   margin-bottom: 75px;
 }
 .container {
@@ -26,6 +26,7 @@ html {
   height:150px;
   width:100%;
   background-color:#2980b9;
+  margin-bottom:15px;
 }
 #content {
   width:100%;
@@ -65,6 +66,7 @@ html {
   color:#ecf0f1;
   font-size:10pt;
   padding: 7px;
+  padding-left: 8px;
 }
 #infoText {
   font-weight:600;
@@ -177,7 +179,7 @@ small {
 }
 #dragdropbox {
   width:50%;
-  height:180px;
+  height:240px;
   border: #95a5a6 3px solid;
   border-radius:5px;
   margin-top:100px;
@@ -211,23 +213,16 @@ small {
   width:100%;
   height:50px;
   border: #95a5a6 1px solid;
-  margin-top:15px;
+  margin-bottom:15px;
 }
 .fileRowContent {
   height:35px;
-}
-.precentage {
-  font-size: 8pt;
-  float: left;
-  line-height: 15px;
-  margin-left:3px;
 }
 .fileName {
   font-size:10pt;
   font-weight:700;
   color: #4a4a4a;
   float:left;
-  width:250px;
   margin: 5px;
 }
 .linkText {
@@ -246,4 +241,17 @@ small {
 }
 .copyButton : hover {
   background-color:#28b463 !important;
+}
+.sizeText {
+  margin-top: 5px;
+  margin-left:5px;
+}
+#browseButton {
+  background-color: #7f8c8d;
+  box-shadow: none;
+}
+.osText {
+  font-size: 9pt;
+  color: #212121;
+  font-weight: 600;
 }

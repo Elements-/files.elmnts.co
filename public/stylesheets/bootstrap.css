@@ -1349,11 +1349,11 @@ a.text-primary:focus {
   color: #0c7cd5;
 }
 .text-success {
-  color: #4caf50;
+  color: #27ae60;
 }
 a.text-success:hover,
 a.text-success:focus {
-  color: #3d8b40;
+  color: #27ae60;
 }
 .text-info {
   color: #9c27b0;
@@ -2817,25 +2817,25 @@ select[multiple].input-lg {
 .has-success.checkbox label,
 .has-success.radio-inline label,
 .has-success.checkbox-inline label {
-  color: #4caf50;
+  color: #27ae60;
 }
 .has-success .form-control {
-  border-color: #4caf50;
+  border-color: #27ae60;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
-  border-color: #3d8b40;
+  border-color: #27ae60;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #92cf94;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #92cf94;
 }
 .has-success .input-group-addon {
-  color: #4caf50;
-  border-color: #4caf50;
+  color: #27ae60;
+  border-color: #27ae60;
   background-color: #dff0d8;
 }
 .has-success .form-control-feedback {
-  color: #4caf50;
+  color: #27ae60;
 }
 .has-warning .help-block,
 .has-warning .control-label,
@@ -3188,25 +3188,25 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #4caf50;
+  background-color: #27ae60;
   border-color: transparent;
 }
 .btn-success:focus,
 .btn-success.focus {
   color: #ffffff;
-  background-color: #3d8b40;
+  background-color: #27ae60;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-success:hover {
   color: #ffffff;
-  background-color: #3d8b40;
+  background-color: #27ae60;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #3d8b40;
+  background-color: #27ae60;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-success:active:hover,
@@ -3245,11 +3245,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #4caf50;
+  background-color: #27ae60;
   border-color: transparent;
 }
 .btn-success .badge {
-  color: #4caf50;
+  color: #27ae60;
   background-color: #ffffff;
 }
 .btn-info {
@@ -4929,11 +4929,11 @@ a.label:focus {
   background-color: #0c7cd5;
 }
 .label-success {
-  background-color: #4caf50;
+  background-color: #27ae60;
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #3d8b40;
+  background-color: #27ae60;
 }
 .label-info {
   background-color: #9c27b0;
@@ -5103,13 +5103,13 @@ a.thumbnail.active {
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
-  color: #4caf50;
+  color: #27ae60;
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
 }
 .alert-success .alert-link {
-  color: #3d8b40;
+  color: #27ae60;
 }
 .alert-info {
   background-color: #e1bee7;
@@ -5207,7 +5207,7 @@ a.thumbnail.active {
   animation: progress-bar-stripes 2s linear infinite;
 }
 .progress-bar-success {
-  background-color: #4caf50;
+  background-color: #27ae60;
 }
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5369,12 +5369,12 @@ button.list-group-item {
   color: #e3f2fd;
 }
 .list-group-item-success {
-  color: #4caf50;
+  color: #27ae60;
   background-color: #dff0d8;
 }
 a.list-group-item-success,
 button.list-group-item-success {
-  color: #4caf50;
+  color: #27ae60;
 }
 a.list-group-item-success .list-group-item-heading,
 button.list-group-item-success .list-group-item-heading {
@@ -5384,7 +5384,7 @@ a.list-group-item-success:hover,
 button.list-group-item-success:hover,
 a.list-group-item-success:focus,
 button.list-group-item-success:focus {
-  color: #4caf50;
+  color: #27ae60;
   background-color: #d0e9c6;
 }
 a.list-group-item-success.active,
@@ -5394,8 +5394,8 @@ button.list-group-item-success.active:hover,
 a.list-group-item-success.active:focus,
 button.list-group-item-success.active:focus {
   color: #fff;
-  background-color: #4caf50;
-  border-color: #4caf50;
+  background-color: #27ae60;
+  border-color: #27ae60;
 }
 .list-group-item-info {
   color: #9c27b0;
@@ -5768,14 +5768,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-success > .panel-heading {
   color: #ffffff;
-  background-color: #4caf50;
+  background-color: #27ae60;
   border-color: #d6e9c6;
 }
 .panel-success > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #d6e9c6;
 }
 .panel-success > .panel-heading .badge {
-  color: #4caf50;
+  color: #27ae60;
   background-color: #ffffff;
 }
 .panel-success > .panel-footer + .panel-collapse > .panel-body {
@@ -6875,7 +6875,7 @@ button.close {
   background-position: 50%;
 }
 .btn-success:focus {
-  background-color: #4caf50;
+  background-color: #27ae60;
 }
 .btn-success:hover,
 .btn-success:active:hover {
@@ -6883,9 +6883,9 @@ button.close {
 }
 .btn-success:active {
   background-color: #39843c;
-  background-image: -webkit-radial-gradient(circle, #39843c 10%, #4caf50 11%);
-  background-image: -o-radial-gradient(circle, #39843c 10%, #4caf50 11%);
-  background-image: radial-gradient(circle, #39843c 10%, #4caf50 11%);
+  background-image: -webkit-radial-gradient(circle, #39843c 10%, #27ae60 11%);
+  background-image: -o-radial-gradient(circle, #39843c 10%, #27ae60 11%);
+  background-image: radial-gradient(circle, #39843c 10%, #27ae60 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
@@ -7376,8 +7376,8 @@ input[type="checkbox"]:disabled:checked:after,
 .has-success input:not([type=checkbox]):focus,
 .has-success .form-control:focus {
   border-bottom: none;
-  -webkit-box-shadow: inset 0 -2px 0 #4caf50;
-  box-shadow: inset 0 -2px 0 #4caf50;
+  -webkit-box-shadow: inset 0 -2px 0 #27ae60;
+  box-shadow: inset 0 -2px 0 #27ae60;
 }
 .has-warning .input-group-addon,
 .has-error .input-group-addon,
@@ -7443,7 +7443,7 @@ input[type="checkbox"]:disabled:checked:after,
   color: #fff;
 }
 .alert-success {
-  background-color: #4caf50;
+  background-color: #27ae60;
 }
 .alert-info {
   background-color: #9c27b0;

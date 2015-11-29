@@ -8,13 +8,14 @@ exports.handle = function(req, res) {
     // unit conversions
     var storage = round(docs[0].storage / 1000000000); // bytes -> GB
     var bandwidth = round(docs[0].bandwidth / 1000000000); // bytes -> GB
-    var downloads = round(docs[0].downloads / 1000); // # -> #K
+    var downloads = round(docs[0].downloads);
+    var uploads = round(docs[0].uploads);
 
     // render the page with human readable values
     res.render('index', {
       "siteTitle" : title,
       "downloads" : downloads,
-      "uploads" : docs[0].uploads,
+      "uploads" : uploads,
       "storage" : storage,
       "bandwidth" : bandwidth
     });
@@ -24,5 +25,5 @@ exports.handle = function(req, res) {
 };
 
 function round(num) {
-  return +(Math.round(num + "e+1")  + "e-1");
+  return (+(Math.round(num + "e+1")  + "e-1")).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

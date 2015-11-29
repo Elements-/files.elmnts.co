@@ -1,29 +1,22 @@
-include layout
-#wrap
-  .container
-    .row
-      .col-md-4
-        h2= siteTitle
-      .col-md-3
-        .stats
-          span.label.label-primary
-            .col-md-5.labelText UPLOADS
-            .col-md-7.labelData #{uploads} (#{storage}GB)
-          span.label.label-success
-            .col-md-5.labelText DOWNLOADS
-            .col-md-7.labelData #{downloads}k (#{bandwidth}GB)
-      .col-md-5
-        #selfDestruct.pull-right
-          span Self Destruct after Download&nbsp;
-          input#selfDestruct(type='checkbox',value='selfDestruct',onclick='setSelfDestruct(this)')
-          span &nbsp;&nbsp;&nbsp;
-          button.btn.btn-lg.btn-primary.select
-            span UPLOAD&nbsp;&nbsp;
-            i.fa.fa-upload
-    p File sharing made easy with direct download links, up to 1Gb/s speeds, and 100% uptime. Files are encrypted using AES256, keys stored in the download URL to keep files on our servers useless alone. Max upload size is 256MB.&nbsp;
-      a(href='#', type='button', data-toggle='modal', data-target='#demo')
-        span UNIX Command Line Usage
+doctype html
+html
+  head
+    title files.elmnts.co
 
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/animations.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/newstyle.css')
+
+    script(type='text/javascript', src='/javascripts/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='/javascripts/dropzone.js')
+    script(type='text/javascript', src='/javascripts/ZeroClipboard.min.js')
+    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+    script(type='text/javascript', src='/javascripts/core.js')
+    //script(type='text/javascript', src='/javascripts/compressed.js')
+
+    link(rel='prefetch', href='http://short.elmnts.co/html/3wii19g')
+  body
     #demo.modal.fade(role='dialog')
       .modal-dialog
         .modal-content
@@ -33,9 +26,9 @@ include layout
             hr(style='margin-top:0px')
             h5 Install Dependencies
             p The UNIX upload script uses cURL and wget, these packages are typically installed by default. If they are not, install them:
-            small Debian/Ubuntu
+            small.osText Debian/Ubuntu
             pre apt-get install curl wget
-            small CentOS/Fedora
+            small.osText CentOS/Fedora
             pre yum install curl wget
             br
 
@@ -53,35 +46,91 @@ include layout
 
             h5 Demo Installation and Usage
             img.img-responsive(src='/images/demo.gif')
-    hr
+    #navbar
+      .container
+        .row
+          .col-xs-6
+            #title=siteTitle
+            .row
+              .col-xs-1
+                .circle
+                  i.fa.fa-info.icon
+              .col-xs-11
+                #infoText File sharing made easy with direct download links, up to 1Gb/s speeds, and 100% uptime. Files are encrypted using AES256, keys stored in the download URL to keep files on our servers encrypted on the disk.
+            .divider
+            .row
+              .col-xs-6
+                small Max upload size is 256MB.
+              .col-xs-6
+                a(href='#', type='button', data-toggle='modal', data-target='#demo')
+                  small.pull-right UNIX CLI Information
+          .col-xs-3
+            .deleteFileBox
+              p#deleteFileText DELETE FILE AFTER FIRST DOWNLOAD
+              .onoffswitch
+                input#myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
+                label.onoffswitch-label(for='myonoffswitch')
+                  span.onoffswitch-inner
+                  span.onoffswitch-switch
+          .col-xs-3
+            .statBox.downloads
+              .row
+                .col-xs-8
+                  .statTitle
+                    i.fa.fa-download.icon
+                    | &nbsp;&nbsp;DOWNLOADS
+                .col-xs-4
+                  .stat #{downloads}
+                  .stat #{bandwidth}GB
+            .statBox.uploads
+              .row
+                .col-xs-8
+                  .statTitle
+                    i.fa.fa-upload.icon
+                    | &nbsp;&nbsp;UPLOADS
+                .col-xs-4
+                  .stat #{uploads}
+                  .stat #{storage}GB
+    #content
+      .container#uploadsArea
+        #template(style='display:none;')
+          .fileRow
+            .fileRowContent
+              .row
+                .col-xs-4
+                  .fileCircle
+                    i.fa.icon.fileTypeIcon
+                  .fileName
+                    span(data-dz-name='')
+                    span(data-dz-size='').sizeText
+                .col-xs-5
+                  .linkText
+                .col-xs-3
+                  button.btn.btn-success.copyButton
+                    span
+                      i.fa.fa-scissors
+                    span
+                      small &nbsp;&nbsp;FILE IS UPLOADING
+            .progress
+              .progress-bar(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width:0%', data-dz-uploadprogress='')
 
-    #uploadBox
-      center
-        i#uploadIcon.fa.fa-cloud-upload
-        h4#uploadText Drop files here to upload
-        
-    #previews
-        #template.uploadcontainer.slideup(class='slideDown',style='visibility:hidden;')
-          .uploadtext
-            span
-              span &nbsp;&nbsp;
-              i.fa.fa-file
-              span &nbsp;&nbsp;
-              span.name(data-dz-name='')
-              span &nbsp;&nbsp;&nbsp;
-              strong.error.text-danger(data-dz-errormessage='')
-            span
-              span.size(data-dz-size='')
-              span &nbsp;&nbsp;&nbsp;
-            span
-              strong.pull-right
-                span.link
-
-                //span &nbsp;
-                //span
-                  //i.fa.fa-cloud-download
-                span &nbsp;
-          .progress.progress-striped.active(role='progressbar', aria-valuemin='0', aria-valuemax='100', aria-valuenow='0')
-            .progress-bar.progress-bar-success(style='width:0%;', data-dz-uploadprogress='')
-script(src='/javascripts/client-upload.js')
-include footer
+        #dragdropbox.fadeIn
+          center
+            i.fa.fa-cloud-upload#dragdropicon
+            #dragdroptext Drop files here to upload
+            #dragdroptext or
+            button.btn(type='button')#browseButton
+              small BROWSE FOR FILES
+    footer.footer
+      .container
+        .row
+          .col-xs-4
+            img.footerlogo(src='http://files.elmnts.co/dl/kk9z30vsra4i/elementstechlogosmall.png')
+            a(href='http://elmnts.co')
+              small.footerlabel &nbsp;&nbsp;ELMNTS.CO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            i.fa.fa-github.footerlogo
+            a(href='https://github.com/Elements-/files.elmnts.co')
+              small.footerlabel &nbsp;&nbsp;GITHUB
+          .col-xs-2.col-xs-offset-6
+            small.footerlabel PRIVACY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            small.footerlabel CONTACT
