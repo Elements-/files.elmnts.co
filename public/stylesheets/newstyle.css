@@ -231,6 +231,7 @@ small {
   color: #4a4a4a;
   float:right;
   margin:5px;
+  width: 450px;
 }
 .copyButton {
   width:100%;

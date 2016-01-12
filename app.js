@@ -15,7 +15,7 @@ https://github.com/Elements-
 require('pmx').init({ http : true });
 
 // configuration
-storageLocation = '/root/nodejs/files.elmnts.co/public/files/';
+storageLocation = '/home/nodejs/files.elmnts.co/public/files/';
 serverAddress = 'http://files.elmnts.co';
 title = 'files.elmnts.co';
 
@@ -32,6 +32,7 @@ var routes = require('./routeHandler');
 
 // express instance, main app
 var app = express();
+app.set('trust proxy', 'loopback');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

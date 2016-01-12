@@ -22,7 +22,7 @@ exports.handle = function(req, res) {
     // rename function is called at start of upload
     rename: function(name, file) {
       stats.uploadIncrement(file.size);
-      realname = file.filename;
+      realname = file.filename.replace(' ', '_');
       log(req.cf_ip, 'has started uploading ' + realname);
       return encryption.getHashedName(realname, key) + '.dat';
     }
