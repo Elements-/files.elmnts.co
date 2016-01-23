@@ -12,6 +12,7 @@
     "file-encryptor": "^0.1.0",
     "fs": "0.0.2",
     "jade": "~1.11.0",
+    "mime": "^1.3.4",
     "moment": "^2.10.6",
     "mongo-handler": "^0.2.1",
     "mongodb": "^2.0.46",

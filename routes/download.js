@@ -1,11 +1,14 @@
 var express = require('express');
 var crypto = require('crypto');
 var fs = require('fs');
+var mime = require('mime');
+
 var stats = require('../statsHandler');
 var encryption = require('../encryption');
 
 exports.handle = function(req, res) {
   var filename = encryption.getHashedName(req.params.filename, req.params.key);
+  res.set('Content-Type', mime.lookup(req.params.filename));
 
   fileExists(storageLocation + filename, function(stat) {
     // file exists
